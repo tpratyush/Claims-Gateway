@@ -8,7 +8,7 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 const port = process.env.PORT || 3002;
-const mainAppUrl = process.env.MAIN_APP_URL || 'http://localhost:3001';
+const mainAppUrl = 'https://stateless-cms.onrender.com' || 'http://localhost:3001';
 
 app.use('/', createProxyMiddleware({
   target: mainAppUrl,
